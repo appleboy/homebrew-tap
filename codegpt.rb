@@ -1,4 +1,4 @@
-class CodeGPT < Formula
+class Codegpt < Formula
   desc "A CLI written in Go language that writes git commit messages for you using ChatGPT AI (gpt-3.5-turbo model) and automatically installs a git prepare-commit-msg hook."
   homepage "https://github.com/appleboy/CodeGPT"
   version "0.0.7"
