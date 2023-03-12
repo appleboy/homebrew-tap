@@ -3,33 +3,37 @@ class Codegpt < Formula
   homepage "https://github.com/appleboy/CodeGPT"
   version "0.0.7"
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/appleboy/CodeGPT/releases/download/v0.0.7/CodeGPT-0.0.7-darwin-amd64"
-      sha256 "a415dea29c21dbc50cb6f77319a07ad76f9d722119b85277bc13aced06581a65"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/appleboy/CodeGPT/releases/download/v0.0.7/CodeGPT-0.0.7-darwin-arm64"
-      sha256 "c5f3e7d3013e7857233afe3dc6a2b914513d22dfce9d7a4a07bb81965d986d4d"
-    end
-  end
+  os = OS.mac? ? "darwin" : "linux"
+  arch = case Hardware::CPU.arch
+         when :x86_64 then "amd64"
+         when :arm64 then "arm64"
+         else
+           raise "CodeGPT: Unsupported system architecture #{Hardware::CPU.arch}"
+         end
 
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/appleboy/CodeGPT/releases/download/v0.0.7/CodeGPT-0.0.7-linux-amd64"
-      sha256 "99d183d8bc36a0c9bed9ef5efc1f640e1e553367752e505621570ece614a9136"
+  @@filename = "CodeGPT-#{version}-#{os}-#{arch}"
+  @@url = "https://github.com/appleboy/CodeGPT/releases/download/#{version}/#{@@filename}"
+  @@using = :nounzip
+
+  @@sha256 = case "#{os}-#{arch}"
+    when "linux-amd64" then "99d183d8bc36a0c9bed9ef5efc1f640e1e553367752e505621570ece614a9136"
+    when "linux-arm64" then "6def3f20cc60d898a1a949516bac2caccbf180421d0f58fc3132c0b3bba769a4" # binary
+    when "darwin-amd64" then "a415dea29c21dbc50cb6f77319a07ad76f9d722119b85277bc13aced06581a65"
+    when "darwin-arm64" then "c5f3e7d3013e7857233afe3dc6a2b914513d22dfce9d7a4a07bb81965d986d4d"
+    else
+      raise "CodeGPT: Unsupported system #{os}-#{arch}"
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/appleboy/CodeGPT/releases/download/v0.0.7/CodeGPT-0.0.7-linux-arm64"
-      sha256 "6def3f20cc60d898a1a949516bac2caccbf180421d0f58fc3132c0b3bba769a4"
-    end
-  end
+
+  sha256 @@sha256
+  url @@url,
+    using: @@using
 
   depends_on "git"
   depends_on "zsh" => :optional
 
   def install
-    bin.install "codegpt"
+    filename = Codegpt.class_variable_get("@@filename")
+    bin.install filename => "tea"
 
     # Install bash completion
     output = Utils.safe_popen_read("#{bin}/codegpt", "completion", "bash")
@@ -41,6 +45,6 @@ class Codegpt < Formula
   end
 
   test do
-    system "#{bin}/codegpt version"
+    system "#{bin}/codegpt", "version"
   end
 end
