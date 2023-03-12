@@ -33,7 +33,7 @@ class Codegpt < Formula
 
   def install
     filename = Codegpt.class_variable_get("@@filename")
-    bin.install filename => "tea"
+    bin.install filename => "codegpt"
 
     # Install bash completion
     output = Utils.safe_popen_read("#{bin}/codegpt", "completion", "bash")
