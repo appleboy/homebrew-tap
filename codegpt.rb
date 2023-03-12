@@ -34,14 +34,6 @@ class Codegpt < Formula
   def install
     filename = Codegpt.class_variable_get("@@filename")
     bin.install filename => "codegpt"
-
-    # Install bash completion
-    output = Utils.safe_popen_read("#{bin}/codegpt", "completion", "bash")
-    (bash_completion/"codegpt").write output
-
-    # Install zsh completion
-    output = Utils.safe_popen_read("#{bin}/codegpt", "completion", "zsh")
-    (zsh_completion/"_codegpt").write output
   end
 
   test do
