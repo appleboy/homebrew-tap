@@ -12,7 +12,7 @@ class Codegpt < Formula
          end
 
   @@filename = "CodeGPT-#{version}-#{os}-#{arch}"
-  @@url = "https://github.com/appleboy/CodeGPT/releases/download/#{version}/#{@@filename}"
+  @@url = "https://github.com/appleboy/CodeGPT/releases/download/v#{version}/#{@@filename}"
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
