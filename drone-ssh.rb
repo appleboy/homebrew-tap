@@ -1,4 +1,4 @@
-class drone-ssh < Formula
+class DroneSsh < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-ssh"
   version "1.16.1"
