@@ -31,7 +31,7 @@ class DroneSsh < Formula
   depends_on "zsh" => :optional
 
   def install
-    filename = drone-ssh.class_variable_get("@@filename")
+    filename = DroneSsh.class_variable_get("@@filename")
     bin.install filename => "drone-ssh"
   end
 
