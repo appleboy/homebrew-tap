@@ -2,6 +2,11 @@
 
 Homebrew repository to install tools on macOS.
 
+## Support Tool
+
+* [CodeGPT](https://github.com/appleboy/CodeGPT)
+* [drone-ssh](https://github.com/appleboy/drone-ssh)
+
 ## Prepare
 
 ```sh
