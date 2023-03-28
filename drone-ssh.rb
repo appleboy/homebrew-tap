@@ -1,7 +1,7 @@
 class DroneSsh < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-ssh"
-  version "1.16.1"
+  version "1.16.11"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
