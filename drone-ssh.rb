@@ -16,10 +16,10 @@ class DroneSsh < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "23642bd2038c432ee79dfa64832870e9b81a8e149f4ee462910492c8d850ac76"
-    when "linux-arm64" then "dd74152fb9377aeecf468b5b2be01415773dac0dae37363e94aa4baaa782099c"
-    when "darwin-amd64" then "b7b6ae58ed844332f0f4d351b05218a1efd8f1460a3ee4dcfc50a2c40926490c"
-    when "darwin-arm64" then "b8c0e2d53416bfb9626d2b95c077349d38f98c8fbe5174dfc27b299b08b96aa0"
+    when "linux-amd64" then "151ae9f10389a19c324b1af8a4b74a84f383cbc2fe9cbeaaf8b1b5718d883df0"
+    when "linux-arm64" then "8121abfb28c95ef125b8a9425031c2e00947ba8a44ec068ecced030fcde9de3b"
+    when "darwin-amd64" then "957424d8281cdf329ed66ecf96f0cac2041964e2a89245a59d0dfe2122695cee"
+    when "darwin-arm64" then "ff9538ac7656e8ec5655d43eaa159c20381ee66f5fd3b2240f1c90604dff020e"
     else
       raise "drone-ssh: Unsupported system #{os}-#{arch}"
     end
