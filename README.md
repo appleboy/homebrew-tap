@@ -6,6 +6,7 @@ Homebrew repository to install tools on macOS.
 
 * [CodeGPT](https://github.com/appleboy/CodeGPT)
 * [drone-ssh](https://github.com/appleboy/drone-ssh)
+* [drone-lambda](https://github.com/appleboy/drone-lambda)
 * [gorush](https://github.com/appleboy/gorush)
 
 ## Prepare
