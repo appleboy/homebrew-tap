@@ -27,7 +27,7 @@ codegpt -h
 ## Upgrade
 
 ```sh
-brew untap appleboy/tap
+brew untap -f appleboy/tap
 brew tap appleboy/tap
 ```
 
