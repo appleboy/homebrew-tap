@@ -1,7 +1,7 @@
 class DroneLambda < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-lambda"
-  version "1.3.5"
+  version "1.3.6"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
