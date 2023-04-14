@@ -1,7 +1,7 @@
 class Codegpt < Formula
   desc "A CLI written in Go language that writes git commit messages for you using ChatGPT AI (gpt-3.5-turbo model) and automatically installs a git prepare-commit-msg hook."
   homepage "https://github.com/appleboy/CodeGPT"
-  version "0.1.7"
+  version "0.1.8"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -16,10 +16,10 @@ class Codegpt < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "2232fd87b39424b685da5a1e33f200d8d0d6827494fa612cf47646321351057c"
-    when "linux-arm64" then "884f14b77c64d6fd0b58ca04e3f3c847a026dc44e347774f26dda463192d5863"
-    when "darwin-amd64" then "b8162f8ddc80f1774f5f39093688fb3f1b0903361b22cadd3668736af077c355"
-    when "darwin-arm64" then "c75d38319cfbc6dbd83f33c50b17cb09cb26880c6f4f89e73c0cf4f4b4e19eb2"
+    when "linux-amd64" then "24b869d66a8a31c5f127a9dcbdd1909eee4a44b8c8deb5d4ba1fea25b4bcb1b7"
+    when "linux-arm64" then "0bd9577cea5731af365c37fe9d9a7e13d7c75f8aa002fd2cf068e15412b3b8c6"
+    when "darwin-amd64" then "ed1b1e2d116876604b782d16fa1f1b24ff36a3895e267e7770c6bfe9c1874826"
+    when "darwin-arm64" then "aec60b2c924c80fe6a12f1aa0914a427d7524fe9acbd00194846f5cdca1e0450"
     else
       raise "CodeGPT: Unsupported system #{os}-#{arch}"
     end
