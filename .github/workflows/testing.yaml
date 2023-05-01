@@ -22,9 +22,8 @@ jobs:
 
       - name: install git
         run: |
-          brew update
-          brew install git
-          git --version
+          brew install node
+          node --version
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: test install
