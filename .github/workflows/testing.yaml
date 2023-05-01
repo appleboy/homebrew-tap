@@ -20,11 +20,12 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v3
 
-      - name: install git
+      - name: change git config
         run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          brew install node
-          node --version
+          echo $GITHUB_WORKSPACE
+          echo ${{ env.GITHUB_WORKSPACE }}
+          echo ${{ github.workspace }}
+          git config --global --add safe.directory ${{ github.workspace }}
 
       - name: test install
         run: |
