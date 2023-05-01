@@ -22,9 +22,7 @@ jobs:
 
       - name: install git
         run: |
-          brew config
-          brew doctor
-          brew install --debug ets
+          brew update
           brew install git
           git --version
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
