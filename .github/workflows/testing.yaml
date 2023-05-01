@@ -10,7 +10,9 @@ jobs:
       matrix:
         brew_version: ["latest"]
     runs-on: ubuntu-latest
-    container: homebrew/brew:${{ matrix.brew_version }}
+    container:
+      image: homebrew/brew:${{ matrix.brew_version }}
+      options: --user root
     env:
       HOMEBREW_NO_AUTO_UPDATE: 1
     steps:
