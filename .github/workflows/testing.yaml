@@ -23,6 +23,17 @@ jobs:
       - name: test install
         run: |
           git config --global --add safe.directory ${{ github.workspace }}
+          git config --global --add safe.directory /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core
           brew tap appleboy/tap "${PWD}"
           brew install appleboy/tap/gorush
           gorush --version
+          brew install appleboy/tap/codegpt
+          codegpt version
+          brew install appleboy/tap/drone-git-push
+          drone-git-push --version
+          brew install appleboy/tap/drone-lambda
+          drone-lambda --version
+          brew install appleboy/tap/drone-scp
+          drone-scp --version
+          brew install appleboy/tap/drone-ssh
+          drone-ssh --version
