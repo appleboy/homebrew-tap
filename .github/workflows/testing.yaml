@@ -20,15 +20,9 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v3
 
-      - name: change git config
-        run: |
-          echo $GITHUB_WORKSPACE
-          echo ${{ env.GITHUB_WORKSPACE }}
-          echo ${{ github.workspace }}
-          git config --global --add safe.directory ${{ github.workspace }}
-
       - name: test install
         run: |
+          git config --global --add safe.directory ${{ github.workspace }}
           brew tap appleboy/tap "${PWD}"
-          brew install appleboy/tap/drone-git-push
-          drone-git-push --version
+          brew install appleboy/tap/gorush
+          gorush --version
