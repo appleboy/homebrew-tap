@@ -1,7 +1,7 @@
 class DroneGitPush < Formula
   desc "Drone plugin for deploying code using git push"
   homepage "https://github.com/appleboy/drone-git-push"
-  version "0.1.4"
+  version "1.0.4"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
