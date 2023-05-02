@@ -1,0 +1,25 @@
+name: update
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: update
+        run: ./scripts/bump_version.sh
+
+      - name: commit
+        uses: appleboy/git-push-action@v0.0.2
+        with:
+          author_email: "appleboy.tw@gmail.com"
+          author_name: Bo-Yi Wu
+          branch: main
+          commit: true
+          commit_message: "[skip ci] Updated Version via cron"
+          remote: "git@github.com:appleboy/homebrew-tap.git"
+          ssh_key: ${{ secrets.DEPLOY_KEY }}
