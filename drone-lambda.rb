@@ -1,7 +1,7 @@
 class DroneLambda < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-lambda"
-  version "1.3.6"
+  version "1.3.7"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -16,10 +16,10 @@ class DroneLambda < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "a24b82c7cfe0a3c59f95ef2f178be6fa3c0e23d5065071962cbc25dcc08f0087"
-    when "linux-arm64" then "1102555a54f70475ee73e1681df5d1fe9f1cbd31e7ec86032ba122b8f46cd71b"
-    when "darwin-amd64" then "19e8a367530f06ee0c988ef3c82ceae98d07ec3f78374296b22254e845f2be89"
-    when "darwin-arm64" then "b1a0a5c6bbbd921d289170738cc0324886d24d330ce60e102d8deff91ab1add8"
+    when "linux-amd64" then "5334bbce00e4dba4d3be53b081bb2cad796aafb58b450816516bfead3e22ff6f"
+    when "linux-arm64" then "55ae895650b5212d23db47a0a1d8047f0216f0a016f76e72d17436a1a0964202"
+    when "darwin-amd64" then "15bfa9c6baa586b980222435306d0cbb9104987f96cb609f5dca0652848cb43d"
+    when "darwin-arm64" then "d68dbc66d2f80e4d61276d4f18484fcf35882c468fb4ef7cae4ce47e6179fdcf"
     else
       raise "drone-lambda: Unsupported system #{os}-#{arch}"
     end
