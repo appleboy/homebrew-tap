@@ -4,27 +4,9 @@ binaries="drone-lambda codegpt drone-git-push drone-scp drone-ssh gorush"
 for bin in ${binaries};do
   file="${bin}.rb"
   case "$bin" in
-    drone-lambda)
-      git_url="https://github.com/appleboy/drone-lambda"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-    codegpt)
-      git_url="https://github.com/appleboy/codegpt"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-    drone-git-push)
-      git_url="https://github.com/appleboy/drone-git-push"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-    drone-scp)
-      git_url="https://github.com/appleboy/drone-scp"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-    drone-ssh)
-      git_url="https://github.com/appleboy/drone-ssh"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
-    gorush)
-      git_url="https://github.com/appleboy/gorush"
-      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
     *)
-      >&2 echo "Error: unrecognized binary ($bin)"
-      exit 1;;
+      git_url="https://github.com/appleboy/${bin}"
+      supported_os="linux-amd64 linux-arm64 darwin-amd64 darwin-arm64";;
   esac
   latest=$(curl -skL -o /dev/null -w %{url_effective} "${git_url}/releases/latest")
   version="${latest##*/v}"
