@@ -16,10 +16,10 @@ class Gorush < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "db90f81fabc3c8afbba8d0c05f2adcae52ec537c5b8207b7f499b0efee35a5bb"
-    when "linux-arm64" then "4aad5ead470d46dcf62be3a0df5a34dd175101c75697a5242feec70c754d9b28"
-    when "darwin-amd64" then "b4d9f5481c4cf56c7237d6cb7007b33f541ddc77cdebb1cfd373c6ada396c047"
-    when "darwin-arm64" then "8aa558a0612bfafbd867135c1e6ac0054a268ad959e3f59aae96dd122a8a3803"
+    when "linux-amd64" then ""
+    when "linux-arm64" then ""
+    when "darwin-amd64" then ""
+    when "darwin-arm64" then ""
     else
       raise "gorush: Unsupported system #{os}-#{arch}"
     end

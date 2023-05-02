@@ -16,10 +16,10 @@ class DroneScp < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "066e118dbd6f2a2cdcbb9f95124a4f04a084c26d03fbb4fe9a140f85095111a4"
-    when "linux-arm64" then "19cd7e63d064c45d942047b1b267492c9cea016c1e9062ad53ebaf48bfcccdc2"
-    when "darwin-amd64" then "4236a317237ac8942582146d013c2adb89c5bf082d9b8af62b41ff95b5564b5f"
-    when "darwin-arm64" then "205ef0869c6bfc8682b90fa14d12815890f2e14624757a9ac2c34e412a8e2ecb"
+    when "linux-amd64" then ""
+    when "linux-arm64" then ""
+    when "darwin-amd64" then ""
+    when "darwin-arm64" then ""
     else
       raise "drone-scp: Unsupported system #{os}-#{arch}"
     end
