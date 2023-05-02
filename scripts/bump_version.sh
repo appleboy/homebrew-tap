@@ -41,5 +41,5 @@ for bin in ${binaries};do
     echo "update ${bin} os: ${os}, sha256: ${sha256}"
     sed -r "s/^(\s+when \"${os}\" then).*\"(.*)$/\1 \"${sha256}\"\2/" -i "${file}"
   done
-  sed -r "s/^(\s+version).*/\1 \"${version}\"/" -i drone-lambda.rb
+  sed -r "s/^(\s+version).*/\1 \"${version}\"/" -i "${file}"
 done
