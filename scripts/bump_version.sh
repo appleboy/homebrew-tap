@@ -30,7 +30,7 @@ for bin in ${binaries};do
 	version="${latest##*/v}"
   echo "update ${bin} version: ${version}"
 
-	file_url="https://github.com/appleboy/${bin}/releases/download/v${version}"
+	file_url="${git_url}/releases/download/v${version}"
 	for os in ${supported_os}; do
 		sha256_file="checksums.txt"
 		sha256=$(curl -skL "${file_url}/${sha256_file}" | grep ${os}.xz | awk '{print$1}')
