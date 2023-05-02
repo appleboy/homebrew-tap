@@ -13,7 +13,9 @@ class DroneLambda < Formula
 
   @@filename = "drone-lambda-#{version}-#{os}-#{arch}"
   @@url = "https://github.com/appleboy/drone-lambda/releases/download/v#{version}/#{@@filename}"
-  @@using = :nounzip
+  @@url += ".xz"
+  @@using = nil
+  depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
     when "linux-amd64" then "5334bbce00e4dba4d3be53b081bb2cad796aafb58b450816516bfead3e22ff6f"
