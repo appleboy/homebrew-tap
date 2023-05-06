@@ -1,6 +1,7 @@
 # Appleboy: homebrew-tap
 
 [![test](https://github.com/appleboy/homebrew-tap/actions/workflows/testing.yaml/badge.svg)](https://github.com/appleboy/homebrew-tap/actions/workflows/testing.yaml)
+[![update](https://github.com/appleboy/homebrew-tap/actions/workflows/update.yaml/badge.svg)](https://github.com/appleboy/homebrew-tap/actions/workflows/update.yaml)
 
 Homebrew repository to install tools on macOS.
 
