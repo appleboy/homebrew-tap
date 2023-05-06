@@ -13,7 +13,9 @@ class DroneScp < Formula
 
   @@filename = "drone-scp-#{version}-#{os}-#{arch}"
   @@url = "https://github.com/appleboy/drone-scp/releases/download/v#{version}/#{@@filename}"
-  @@using = :nounzip
+  @@url += ".xz"
+  @@using = nil
+  depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
     when "linux-amd64" then "e51c46680215076078499de62b287a378e02e3534dca0346abf785a353e37e0c"
