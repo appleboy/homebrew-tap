@@ -13,7 +13,9 @@ class DroneSsh < Formula
 
   @@filename = "drone-ssh-#{version}-#{os}-#{arch}"
   @@url = "https://github.com/appleboy/drone-ssh/releases/download/v#{version}/#{@@filename}"
-  @@using = :nounzip
+  @@url += ".xz"
+  @@using = nil
+  depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
     when "linux-amd64" then "a82d8d91161423720d1389ad3db916fe4e2645163e164e1eb04a7cb36410c325"
