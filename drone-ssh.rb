@@ -18,10 +18,10 @@ class DroneSsh < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "5231cddb184380c3fed1e088489a11d0ff3a78df41b2f626586dd8cd2aa4813a"
-    when "linux-arm64" then "1752d4db06d7444b2fe8ca008e7e690b9c1cc4e69fa37c35adf605ced651f902"
-    when "darwin-amd64" then "e60aebf933f54b4d83460211170b0f7a7442985af9ec79a46a25e499bd749573"
-    when "darwin-arm64" then "5745df5265e576afd09cecbd80c6223e05fca2652729a2201b8286737068458e"
+    when "linux-amd64" then "2d111bcbf1cd4b7f4bc5888b7aef3b7ed16281abedf2614278946defaa7fd1d8"
+    when "linux-arm64" then "dff9100fb7301901b58225bd1011712a018663df32967b4ed641fd093d15eafe"
+    when "darwin-amd64" then "06f38500c3a31932bf885e5462c693f52a91ba9aecf424242b3ca22a4e9affcc"
+    when "darwin-arm64" then "e5fe14976e3e42bc3291b69d8534a7e87164e09733f32684a47a6fb05eac5822"
     else
       raise "drone-ssh: Unsupported system #{os}-#{arch}"
     end

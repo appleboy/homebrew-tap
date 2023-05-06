@@ -18,10 +18,10 @@ class DroneScp < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "e51c46680215076078499de62b287a378e02e3534dca0346abf785a353e37e0c"
-    when "linux-arm64" then "0ea28e855c0e839518545c81d3949325b08d5f63565aeb9b2ed7f5cbab92c1b7"
-    when "darwin-amd64" then "44b278cd8a46dae91c3d16d5e499deb523efa1c80d23c22ba277517ba4d0a980"
-    when "darwin-arm64" then "d2f2e85858cc67473219f1f51d8a5b74cbf0f3071e812553cc435799c4011035"
+    when "linux-amd64" then "91132ae908f34a86c63225f748dea640f9ea374d168d7eae4d887c1f8270cfbf"
+    when "linux-arm64" then "39a3e67966b6f536aa28d71722870e559925d99cb1c7441cbc2f4a1d4959aaa3"
+    when "darwin-amd64" then "d62410b40b7120a7d0e597245e7a735d87e12f513c0ac5f54a10626e97018596"
+    when "darwin-arm64" then "0f76d7eb07b1d8ecd8d113aac58f855b3d7b4c7b7fb095c8908f024eb712c5cb"
     else
       raise "drone-scp: Unsupported system #{os}-#{arch}"
     end
