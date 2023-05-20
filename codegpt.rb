@@ -13,7 +13,9 @@ class Codegpt < Formula
 
   @@filename = "CodeGPT-#{version}-#{os}-#{arch}"
   @@url = "https://github.com/appleboy/CodeGPT/releases/download/v#{version}/#{@@filename}"
-  @@using = :nounzip
+  @@url += ".xz"
+  @@using = nil
+  depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
     when "linux-amd64" then "6258af5e986b81665a53001717a58e8505131d08668f151740a3e4a26c6376a1"
