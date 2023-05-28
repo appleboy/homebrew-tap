@@ -13,6 +13,7 @@ Homebrew repository to install tools on macOS.
 * [drone-git-push](https://github.com/appleboy/drone-git-push)
 * [drone-scp](https://github.com/appleboy/drone-scp)
 * [gorush](https://github.com/appleboy/gorush)
+* [deploy-k8s](https://github.com/appleboy/deploy-k8s)
 
 ## Prepare
 
