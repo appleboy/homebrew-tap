@@ -1,6 +1,6 @@
 #!/bin/sh
 
-binaries="drone-lambda codegpt drone-git-push drone-scp drone-ssh gorush"
+binaries="drone-lambda codegpt drone-git-push drone-scp drone-ssh gorush deploy-k8s"
 for bin in ${binaries};do
   file="${bin}.rb"
   case "$bin" in
