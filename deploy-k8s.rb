@@ -18,10 +18,10 @@ class DeployK8s < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "5334bbce00e4dba4d3be53b081bb2cad796aafb58b450816516bfead3e22ff6f"
-    when "linux-arm64" then "55ae895650b5212d23db47a0a1d8047f0216f0a016f76e72d17436a1a0964202"
-    when "darwin-amd64" then "15bfa9c6baa586b980222435306d0cbb9104987f96cb609f5dca0652848cb43d"
-    when "darwin-arm64" then "d68dbc66d2f80e4d61276d4f18484fcf35882c468fb4ef7cae4ce47e6179fdcf"
+    when "linux-amd64" then "561d39ef7d3b13e486edfbfd4809ba29134ed8980f0bf33c3e64f005f38bb52f"
+    when "linux-arm64" then "3e760b7513fb9c0ca1f2419898b02417b596d0bcd181f9e58f065fe7e4530c47"
+    when "darwin-amd64" then "55a530538f494c6e7a2575809ddda452d3c288fe2f5589ab8f7ed487b37726ed"
+    when "darwin-arm64" then "d0b2124342aca7c9c06fb6af65c66781a885a0426f7f2ffc89785bed714c6808"
     else
       raise "deploy-k8s: Unsupported system #{os}-#{arch}"
     end
