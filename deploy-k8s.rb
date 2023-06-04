@@ -1,7 +1,7 @@
 class DeployK8s < Formula
   desc "Generate a Kubeconfig or creating & updating K8s Deployments."
   homepage "https://github.com/appleboy/deploy-k8s"
-  version "0.0.3"
+  version "0.0.4"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -18,10 +18,10 @@ class DeployK8s < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "20ebdbc5bcdbcbaefaedd5df2d4a02e5968cad49242251fec3aa8f1daad6b325"
-    when "linux-arm64" then "7f3dcda8cda830a85e6d38c024863a7b9c9621b09aeeff758b390e3e9cc02781"
-    when "darwin-amd64" then "f4bcf672d15095950a719ddb5d232b3482c41ade517ca4f7eac30bad2e04681f"
-    when "darwin-arm64" then "5096f045b4ddfa5836a3c6314bc218d0885e8b20fcbf61a6f4fb75e778deb82d"
+    when "linux-amd64" then "1939a9eaf74688d6a5e92a3bb64d87b16fe3e0894d684a375d9b4783cded0176"
+    when "linux-arm64" then "5948611742f793d6fce40fa09f8f7e4f73c44db80db72a8c02a7ac566c282b57"
+    when "darwin-amd64" then "a295c1e6cb659edea6731a2ce45008dcadd71e8e6e92c48097d9a9f6a02695b9"
+    when "darwin-arm64" then "ed986550d116af3767aae5417a6aeb5fc4872b4071984b2991f05d396308ec0a"
     else
       raise "deploy-k8s: Unsupported system #{os}-#{arch}"
     end
