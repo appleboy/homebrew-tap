@@ -23,7 +23,7 @@ brew tap appleboy/tap
 
 ## Install
 
-CodeGTP
+CodeGPT
 
 ```sh
 brew install codegpt
