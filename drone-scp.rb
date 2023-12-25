@@ -1,7 +1,7 @@
 class DroneScp < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-scp"
-  version "1.6.11"
+  version "1.6.12"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -18,10 +18,10 @@ class DroneScp < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "91132ae908f34a86c63225f748dea640f9ea374d168d7eae4d887c1f8270cfbf"
-    when "linux-arm64" then "39a3e67966b6f536aa28d71722870e559925d99cb1c7441cbc2f4a1d4959aaa3"
-    when "darwin-amd64" then "d62410b40b7120a7d0e597245e7a735d87e12f513c0ac5f54a10626e97018596"
-    when "darwin-arm64" then "0f76d7eb07b1d8ecd8d113aac58f855b3d7b4c7b7fb095c8908f024eb712c5cb"
+    when "linux-amd64" then "20e390dba61635be8bc6c9844100f76c18fa7620c86a7dba97cb6773ae7ecbcc"
+    when "linux-arm64" then "dac796c60bd3bec52a17cb9d1a28dfc6741574e75724265daaaf85e715208171"
+    when "darwin-amd64" then "3046e691c6764ac6493db71c39fff4ba4d474fc76f5c84b3e1450a4d3ea11816"
+    when "darwin-arm64" then "a5c6bddaf86fcb093fea12116b2bbc1cd5af3402aa397ae727fc01f285c5bd75"
     else
       raise "drone-scp: Unsupported system #{os}-#{arch}"
     end
