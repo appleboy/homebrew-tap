@@ -1,7 +1,7 @@
 class DroneGitPush < Formula
   desc "Drone plugin for deploying code using git push"
   homepage "https://github.com/appleboy/drone-git-push"
-  version "1.0.6"
+  version "1.1.0"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -18,10 +18,10 @@ class DroneGitPush < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "3bbfb8da90ea5e23a3c1ff2ae61f64210ac106619e0703a5b517632147837706"
-    when "linux-arm64" then "910a8f8ed7dc83b2bf16d49aa24ef417be9cf51b5c4cd72a485594d0ff68de5f"
-    when "darwin-amd64" then "e807166755e2a5b6ff57eb89f877220a8b3422b4c2574bfb1866d617b28940c1"
-    when "darwin-arm64" then "2ac90ba877b98a111cf0078b6e53d3d734c6fe5ea236cd070396c866ac85ba99"
+    when "linux-amd64" then "ca69aa582995c6d4609729941d6debcf5448ab4db7154ce56f7161691764d6d5"
+    when "linux-arm64" then "f1e92a82dcaff0d269c556b197950b694ed1c651853039d501b868553143cfbc"
+    when "darwin-amd64" then "77e4955b5604dd290c91c382c5d203ec8317d59437957250ab931e0cc2281bf5"
+    when "darwin-arm64" then "f03c9c0314ee5f9a166d20e57bc49df0941419bcda859f0e7af85e8168cd51c6"
     else
       raise "drone-git-push: Unsupported system #{os}-#{arch}"
     end
