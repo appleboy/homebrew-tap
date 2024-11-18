@@ -1,7 +1,7 @@
 class DroneSsh < Formula
   desc "Execute commands on a remote host through SSH"
   homepage "https://github.com/appleboy/drone-ssh"
-  version "1.7.7"
+  version "1.8.0"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -18,10 +18,10 @@ class DroneSsh < Formula
   depends_on "xz"
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "e15ecbc4c1908f59a91629db3fc1cde916b7e95493d2e7331bcbf39cfdaa3423"
-    when "linux-arm64" then "979fccdf61e29e5552ee582d50b7ae639ee86ea6f79c402458198b7d8683099f"
-    when "darwin-amd64" then "6ee532b89c624f1a0557f6fbd81ffa2aec89a69564a59599e7731ef1c9ff73d7"
-    when "darwin-arm64" then "34a02cb27828eb8b13678fadeb4776a80c649eddb7136e77a7fdce1219f123be"
+    when "linux-amd64" then "794225f55d6542e569cc6fb02ba10855741db378fe60d517da92b7672c23da29"
+    when "linux-arm64" then "ef6c940839abda77a8c7cec9b3ad81ace7210221a568148f8bcb290191932cda"
+    when "darwin-amd64" then "c1a00985cfa9394b751759dad1591a3916b9adf33e2c641413364c6a53cd98f2"
+    when "darwin-arm64" then "7e4695230066696a04338488a0030ff1c256d1951cb0de390f165b359d750765"
     else
       raise "drone-ssh: Unsupported system #{os}-#{arch}"
     end
