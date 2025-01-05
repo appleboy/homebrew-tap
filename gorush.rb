@@ -1,7 +1,7 @@
 class Gorush < Formula
   desc "A push notification server written in Go (Golang)."
   homepage "https://github.com/appleboy/gorush"
-  version "1.18.8"
+  version "1.18.9"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = case Hardware::CPU.arch
@@ -16,10 +16,10 @@ class Gorush < Formula
   @@using = :nounzip
 
   @@sha256 = case "#{os}-#{arch}"
-    when "linux-amd64" then "9cfb5a404093d62c702b248036bfdd2f7fe3cb816b653c51147b61b8b80521ad"
-    when "linux-arm64" then "0bce5da3dd2061858e0f751a159a17269b68255a69b76887a0e4c78fce369ad6"
-    when "darwin-amd64" then "18f95229a49534b113ef99d5d8d65bb318a3cca1603c6545f3326fffadc240b0"
-    when "darwin-arm64" then "40630db2495a2289f8643a7428ef01f8e76f8a4603c3f420aca956d9b4c9a273"
+    when "linux-amd64" then "5b18faf574521a124705ea6d0e512cff5a2351f8db3c5896e9a14abdac618fc9"
+    when "linux-arm64" then "bdf0f06faec50785a3492f466cb7e2dfa1200bbc2aa6b79cd4d9e43995956a64"
+    when "darwin-amd64" then "1ce66da5aa849a469c147c970ca7794761b282e064f600aaf30085eacfeb9145"
+    when "darwin-arm64" then "b01cd7b2d43a17bc7ddb3807eb8b8deee715aedbc7ad99e56572122f006e4283"
     else
       raise "gorush: Unsupported system #{os}-#{arch}"
     end
